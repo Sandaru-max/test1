@@ -39,6 +39,8 @@ document.querySelector(".btn_check").addEventListener('click',function(){
     }else if(enteredNumber>guessedNumber){
         document.querySelector(".message").textContent="🤔 oops try lower number!!!"
         score--;
+        document.querySelector(".guess").value="";
+
         if(score>0){
             document.querySelector(".score").textContent=score;}
         else{
@@ -47,6 +49,8 @@ document.querySelector(".btn_check").addEventListener('click',function(){
     }else if(enteredNumber<guessedNumber){
         document.querySelector(".message").textContent="🙃 No try higher number!!!"
         score--;
+        document.querySelector(".guess").value="";
+
         if(score>0){
             document.querySelector(".score").textContent=score;}
         else{
@@ -54,6 +58,8 @@ document.querySelector(".btn_check").addEventListener('click',function(){
         }
 
     }else{
+        document.querySelector(".guess").value="";
+
         document.querySelector(".message").textContent="⛔ Enter only numbers!!!"}
 })
 
